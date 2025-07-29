@@ -8,18 +8,18 @@ MAX_EXTRACT_SIZE = 1024 * 1024  # 1 MB
 # === Extraction patterns and rules ===
 
 six_back_patterns = {
-    "000a2f032489": "title", "000a62a3f043": "title",
-    "0034909f70f6": "media", "0036909f70f6": "media",
-    "0037909f70f6": "media", "003707811d70": "media",
-    "004907811d70": "media", "004c07811d70": "media",
-    "001516c8ae55": "models", "00330d66e56b": "texture",
-    "00046245babb": "wordenc", "0004ddd362b7": "wordenc",
-    "0004cde16282": "wordenc", "0004650456bc": "wordenc",
-    "00010de00c5f": "sounds",
-    "001034d1b7b8": "config", "001234d1b7b8": "config",
-    "0012e14fb6af": "config", "00180ae38f79": "config",
-    "00183d5965ac": "config", "001858c1fcdc": "config",
-    "001893a36c54": "config", "001a58c1fcdc": "config",
+    "000a2f032489": "RS2title", "000a62a3f043": "RS2title",
+    "0034909f70f6": "RS2media", "0036909f70f6": "RS2media",
+    "0037909f70f6": "RS2media", "003707811d70": "RS2media",
+    "004907811d70": "RS2media", "004c07811d70": "RS2media",
+    "001516c8ae55": "RS2models", "00330d66e56b": "RS2texture",
+    "00046245babb": "RS2wordenc", "0004ddd362b7": "RS2wordenc",
+    "0004cde16282": "RS2wordenc", "0004650456bc": "RS2wordenc",
+    "00010de00c5f": "RS2sounds",
+    "001034d1b7b8": "RS2config", "001234d1b7b8": "RS2config",
+    "0012e14fb6af": "RS2config", "00180ae38f79": "RS2config",
+    "00183d5965ac": "RS2config", "001858c1fcdc": "RS2config",
+    "001893a36c54": "RS2config", "001a58c1fcdc": "RS2config",
     "314159265359": "wholearchive",
 }
 
@@ -32,9 +32,9 @@ eight_back_patterns = {
     "2ded480a01": "entity4to8",
     "5e9c595300": "maps14to27",
     "8138952900": "media28to47",
-    "816a8a8e01": "entity12to19",
+    "816a8a8e01": "entitymem12to19",
     "8384eb9200": "textures15to17",
-    "a38c6bba00": "entity20to24",
+    "a38c6bba00": "entitymem20to24",
     "d0fab5f400": "entity7",
 }
 
@@ -92,7 +92,7 @@ real_crc_set = {
 # Manual overrides for label naming by pattern and offset
 manual_extracts = {
     "2dec5e1f00": {
-        276742: "entity10", 262558: "entity11", 236443: "entity12",
+        276742: "entity10", 262558: "entity11", 236443: "RSCentity12",
         236459: "entity13", 236429: "entity14or15", 236322: "entity16or17",
         237283: "entity18", 238238: "entity19",
     },
@@ -181,6 +181,37 @@ manual_extracts = {
         286348: "models32", 286824: "models33or34", 288619: "models35MISSING",
         289822: "models36", 78921: "models6", 79420: "models7", 114375: "sounds1",
         114448: "sounds1",
+        47604: "RS2interface194", 59225: "RS2interface204", 63833: "RS2interface217",
+        64715: "RS2interface218", 69236: "RS2interface222", 69451: "RS2interface224",
+        69570: "RS2interface225", 75084: "RS2interface243", 77121: "RS2interface244",
+        78493: "RS2interface245.1", 78572: "RS2interface245.2", 78563: "RS2interface254",
+        96320: "RS2interface270", 112178: "RS2interface289", 115463: "RS2interface291",
+        118129: "RS2interface299", 122610: "RS2interface306", 127740: "RS2interface308",
+        131721: "RS2interface317", 133891: "RS2interface318", 134325: "RS2interface319",
+        134109: "RS2interface321", 134833: "RS2interface325", 137808: "RS2interface327",
+        142555: "RS2interface330", 142456: "RS2interface332", 142796: "RS2interface333",
+        147570: "RS2interface336", 135148: "RS2interface337", 148381: "RS2interface339",
+        149231: "RS2interface340", 151193: "RS2interface343", 152487: "RS2interface345",
+        154533: "RS2interface346", 158017: "RS2interface347", 158831: "RS2interface349",
+        161416: "RS2interface350", 161818: "RS2interface355", 172248: "RS2interface356",
+        172628: "RS2interface357", 178829: "RS2interface362", 179556: "RS2interface363",
+        184196: "RS2interface365", 185241: "RS2interface367", 186154: "RS2interface368",
+        186739: "RS2interface369", 186692: "RS2interface372", 187822: "RS2interface374",
+        187799: "RS2interface376", 185731: "RS2interface377", 
+        26930: "RS2versionlist243", 26963: "RS2versionlist244", 27461: "RS2versionlist245.1",
+        27881: "RS2versionlist245.2", 33400: "RS2versionlist270", 37525: "RS2versionlist289",
+        38849: "RS2versionlist291", 41720: "RS2versionlist299", 44404: "RS2versionlist306",
+        46443: "RS2versionlist308", 52347: "RS2versionlist317", 52977: "RS2versionlist318",
+        53141: "RS2versionlist319", 53284: "RS2versionlist321", 56728: "RS2versionlist325",
+        59087: "RS2versionlist327", 60574: "RS2versionlist330", 61123: "RS2versionlist332",
+        61245: "RS2versionlist333", 61867: "RS2versionlist336", 63299: "RS2versionlist337",
+        63508: "RS2versionlist339", 64121: "RS2versionlist340", 65686: "RS2versionlist343",
+        65933: "RS2versionlist345", 66457: "RS2versionlist346", 67171: "RS2versionlist347",
+        68903: "RS2versionlist349", 69797: "RS2versionlist350", 71383: "RS2versionlist355",
+        71852: "RS2versionlist356", 72419: "RS2versionlist357", 75695: "RS2versionlist362",
+        76319: "RS2versionlist363", 85893: "RS2versionlist365", 86788: "RS2versionlist367",
+        87378: "RS2versionlist368", 87912: "RS2versionlist369", 88673: "RS2versionlist372",
+        90362: "RS2versionlist374", 90662: "RS2versionlist376", 91366: "RS2versionlist377",
     },
 }
 
@@ -238,11 +269,30 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                         continue
                     f.seek(extract_start)
                     extract = f.read(total_length)
-                    if pattern == "314159265359" and (len(extract) <= 19 or extract[19] not in (0x7F, 0xFF)):
-                        print(f"Skipping 0x{offset:x} (byte 19 != 7F or FF)")
-                        continue
+
                     manual_label = manual_extracts.get(pattern, {}).get(total_length)
-                    out_filename = f"{manual_label}_{offset:012x}.bin" if manual_label else f"{label}_{offset:012x}.bin"
+                    if pattern == "314159265359":
+                        if manual_label:
+                            out_filename = f"{manual_label}_{offset:012x}.bin"
+                        else:
+                            if len(extract) <= 54:
+                                print(f"Skipping 0x{offset:x} (too short for all checks)")
+                                continue
+                            if extract[19] not in (0x7F, 0xFF):
+                                print(f"Skipping 0x{offset:x} (byte 19 != 7F or FF)")
+                                continue
+                            if extract[0] >= 0x1B:
+                                print(f"Skipping 0x{offset:x} (byte 0 >= 1B)")
+                                continue
+                            if extract[2] == 0x00:
+                                print(f"Skipping 0x{offset:x} (byte 2 == 00)")
+                                continue
+                            if extract[53] != 0xE0:
+                                print(f"Skipping 0x{offset:x} (byte 53 != E0)")
+                                continue
+                            out_filename = f"{label}_{offset:012x}.bin"
+                    else:
+                        out_filename = f"{label}_{offset:012x}.bin"
 
                 elif mode == "crc_logic":
                     extract = f.read(40)
@@ -260,6 +310,7 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                             out_filename = f"crc false {label}_{offset:012x}.bin"
                 else:
                     continue
+
                 out_path = os.path.join(out_dir, out_filename)
                 with open(out_path, "wb") as out_file:
                     out_file.write(extract)
