@@ -252,6 +252,15 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
 
             for offset in offsets:
                 extract_start = offset - backtrack
+
+                # Only check 4-byte exclusion for pattern 314159265359
+                if pattern == "314159265359":
+                    f.seek(extract_start - 4)
+                    prefix_bytes = f.read(4)
+                    if prefix_bytes == b'\x0d\xe0\x0c\x5f':
+                        print(f"Skipping 0x{offset:x} (matches exclusion prefix 0DE00C5F)")
+                        continue
+
                 f.seek(extract_start)
 
                 if mode == "length_from_offset":
@@ -287,8 +296,8 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                             if extract[2] == 0x00:
                                 print(f"Skipping 0x{offset:x} (byte 2 == 00)")
                                 continue
-                            if extract[53] != 0xE0:
-                                print(f"Skipping 0x{offset:x} (byte 53 != E0)")
+                            if not (extract[53] == 0xE0 or extract[33] == 0xBF):
+                                print(f"Skipping 0x{offset:x} (byte 53 != E0 and byte 33 != BF)")
                                 continue
                             out_filename = f"{label}_{offset:012x}.bin"
                     else:
@@ -324,3 +333,4 @@ if __name__ == "__main__":
     output_file = sys.argv[2]
     pattern_offsets = parse_output_file(output_file)
     extract_files(image_file, pattern_offsets)
+
