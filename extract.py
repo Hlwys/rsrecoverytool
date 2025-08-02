@@ -301,7 +301,10 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                                 continue
                             out_filename = f"{label}_{offset:012x}.bin"
                     else:
-                        out_filename = f"{label}_{offset:012x}.bin"
+                        if manual_label:
+                            out_filename = f"{manual_label}_{offset:012x}.bin"
+                        else:
+                            out_filename = f"{label}_{offset:012x}.bin"
 
                 elif mode == "crc_logic":
                     extract = f.read(40)
@@ -333,4 +336,3 @@ if __name__ == "__main__":
     output_file = sys.argv[2]
     pattern_offsets = parse_output_file(output_file)
     extract_files(image_file, pattern_offsets)
-
