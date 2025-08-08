@@ -51,35 +51,104 @@ crc_patterns = {
     "ec8aa7b6": "349_dec2005",
 }
 
+loader_patterns = {
+    "2000636c6f616465722e636c617373": "loader_cab",
+    "0c0000006c6f616465722e636c617373": "loader_jar_rsc",
+    "130000007369676e2f7369676e6c696e6b2e636c617373": "loader_jar_rs2",
+}
+
+# Mapping for loaderclassic/loader versions based on bytes 12-14
+loader_map = {
+    "5f8c2d": "loaderclassic161", "743b2e": "loaderclassic162", "0a642e": "loaderclassic163",
+    "4f712e": "loaderclassic164", "4c8f2e": "loaderclassic167", "72a72e": "loaderclassic168",
+    "4ec92e": "loaderclassic170", "72fc2e": "loaderclassic174", "6f142f": "loaderclassic175",
+    "64362f": "loaderclassic176", "3f5f2f": "loaderclassic177", "6a742f": "loaderclassic178",
+    "5d832f": "loaderclassic179", "7c932f": "loaderclassic180", "5a9e2f": "loaderclassic181",
+    "4d3c30": "loaderclassic182", "7d4430": "loaderclassic183", "5d5230": "loaderclassic185",
+    "54aa30": "loaderclassic194", "45dc30": "loaderclassic196", "821831": "loaderclassic198",
+    "865c31": "loaderclassic199", "728d31": "loaderclassic201", "890333": "loaderclassic202",
+    "7b6833": "loaderclassic203", "73b934": "loaderclassic204",
+    "51812f": "loader185", "69822f": "loader186", "8d832f": "loader187",
+    "738d2f": "loader190", "5d7130": "loader204", "5f7e30": "loader211",
+    "758130": "loader213", "818530": "loader214", "6b8630": "loader215",
+    "6a8f30": "loader216", "429030": "loader217", "709430": "loader218",
+    "759a30": "loader219", "489d30": "loader220", "81a530": "loader222",
+    "47aa30": "loader223", "86ab30": "loader224", "6bb230": "loader225",
+    "70c130": "loader228", "75c130": "loader229", "92c130": "loader234",
+    "68c230": "loader236", "76c230": "loader237", "72c330": "loader238",
+    "96c830": "loader240", "70ce30": "loader241", "71d530": "loader242",
+    "4bd530": "loader243", "53dc30": "loader244", "71dd30": "loader245",
+    "69ed30": "loader245", "71f430": "loader245", "59f630": "loader246",
+    "6afb30": "loader247", "6b0231": "loader248", "730931": "loader249",
+    "6b1831": "loader252", "712131": "loader253", "592731": "loader254",
+    "6b2e31": "loader255", "6b3431": "loader256", "733b31": "loader257",
+    "763c31": "loader258", "8b3e31": "loader259", "4c4531": "loader260",
+    "494e31": "loader261", "6a5231": "loader262", "945231": "loader263",
+    "735a31": "loader265", "785c31": "loader267", "4a6231": "loader268",
+    "926431": "loader270", "607131": "loader273", "5c7731": "loader274",
+    "467d31": "loader275", "518631": "loader276", "8e8731": "loader278",
+    "4e8d31": "loader279", "5d8f31": "loader280", "569531": "loader282",
+    "6b2532": "loader285", "602732": "loader287", "582a32": "loader288",
+    "4d3132": "loader289", "5e3a32": "loader290", "5a3f32": "loader291",
+    "694732": "loader292", "6e4832": "loader294", "504e32": "loader295",
+    "4e5632": "loader296", "775732": "loader297", "565c32": "loader298",
+    "836132": "loader299", "5b6732": "loader300", "636e32": "loader302",
+    "7e6e32": "loader303", "557532": "loader304", "517d32": "loader305",
+    "498432": "loader306", "618b32": "loader307", "4b9232": "loader308",
+    "559932": "loader309", "53a432": "loader310", "6ba532": "loader311",
+    "5ea932": "loader312", "53b132": "loader313", "6cbf32": "loader314",
+    "77c132": "loader315", "50c632": "loader316", "6ecd32": "loader317",
+    "4ad632": "loader318", "4edb32": "loader319", "51e532": "loader320",
+    "79e732": "loader321", "6ceb32": "loader322", "46eb32": "loader323",
+    "6ced32": "loader324", "55f232": "loader325", "7bf932": "loader326",
+    "4f0133": "loader327", "4e0933": "loader328", "590f33": "loader329",
+    "5d1633": "loader330", "5b1e33": "loader331", "881e33": "loader332",
+    "6c2633": "loader333", "622c33": "loader334", "693333": "loader336",
+    "793a33": "loader337", "5d3b33": "loader338", "684333": "loader339",
+    "605133": "loader340", "685833": "loader341", "4a5f33": "loader342",
+    "5b6833": "loader343", "4f6e33": "loader344", "4a7533": "loader345",
+    "4f7c33": "loader346", "6a8533": "loader347", "4d8c33": "loader348",
+    "569333": "loader349", "539e33": "loader350", "5e2a34": "loader351",
+    "763034": "loader352", "683034": "loader353", "5a3334": "loader354",
+    "5b3734": "loader355", "513e34": "loader356", "5e4734": "loader357",
+    "715034": "loader358", "505134": "loader359", "565434": "loader360",
+    "565634": "loader361", "6f5634": "loader362", "7b5b34": "loader363",
+    "446734": "loader364", "6a6e34": "loader365", "497534": "loader366",
+    "907534": "loader367", "4a7c34": "loader368", "608334": "loader369",
+    "548a34": "loader370", "758a34": "loader371", "538c34": "loader372",
+    "519234": "loader373", "4b9434": "loader374", "489834": "loader375",
+    "539934": "loader376", "52a234": "loader377",
+}
+
 crc_map = {
-    "0594dfa2": "crc194conf", "b8631530": "crc204conf", "c89e323b": "crc217conf",
+    "dc058ad7": "crc186confNEW", "0594dfa2": "crc194conf", "b8631530": "crc204conf", "c89e323b": "crc217conf",
     "fc92443a": "crc218conf", "350ae405": "crc219conf", "03ccd61b": "crc222conf",
-    "fc32b40f": "crc224conf", "ab100845": "crc225conf", "12006c4a": "crc234conf",
-    "0e47c4c4": "crc237conf", "5fa26512": "crc244conf", "3e413fcb": "crc245conf",
-    "0c56450a": "crc249conf", "2f9e95c6": "crc252conf", "0684d258": "crc253conf",
-    "29b0d321": "crc254conf", "91f26fbf": "crc257conf", "248db1e8": "crc270conf",
-    "2ed494cd": "crc274conf", "fa97bf13": "crc282conf", "fce7f1b6": "crc289conf",
-    "632ec81d": "crc291conf", "01a84a66": "crc294conf", "949c9e5a": "crc295conf",
-    "ad3fdbed": "crc297conf", "b508f498": "crc298conf", "3276b47f": "crc299conf",
-    "af6801a7": "crc300conf", "5ff69069": "crc303conf", "a44b0dbf": "crc306conf",
-    "2567f764": "crc307conf", "dec2416f": "crc308conf", "97b0f079": "crc309conf",
-    "707018ce": "crc311conf", "83c0ed87": "crc312conf", "20c063d0": "crc313conf",
-    "8b7c3c2b": "crc315conf", "e96fcefd": "crc316conf", "438efd17": "crc317conf",
+    "fc32b40f": "crc224conf", "ab100845": "crc225conf", "12006c4a": "crc234confNEW",
+    "0e47c4c4": "crc237confNEW", "5fa26512": "crc244conf", "3e413fcb": "crc245aconf", "31cf9007": "crc245bconf",
+    "0c56450a": "crc249confNEW", "2f9e95c6": "crc252confNEW", "0684d258": "crc253confNEW",
+    "29b0d321": "crc254conf", "91f26fbf": "crc257confNEW", "2bba6b63": "crc260confNEW", "248db1e8": "crc270conf",
+    "2ed494cd": "crc274conf", "fa97bf13": "crc282confNEW", "fce7f1b6": "crc289conf",
+    "632ec81d": "crc291conf", "01a84a66": "crc294confNEW", "949c9e5a": "crc295confNEW",
+    "ad3fdbed": "crc297confNEW", "b508f498": "crc298conf", "3276b47f": "crc299conf",
+    "af6801a7": "crc300confNEW", "5ff69069": "crc303confNEW", "a44b0dbf": "crc306conf",
+    "2567f764": "crc307confNEW", "dec2416f": "crc308conf", "97b0f079": "crc309confNEW",
+    "707018ce": "crc311confNEW", "83c0ed87": "crc312conf", "20c063d0": "crc313confNEW",
+    "8b7c3c2b": "crc315confNEW", "e96fcefd": "crc316confNEW", "438efd17": "crc317conf",
     "6af1aa47": "crc318conf", "fed117ff": "crc321conf", "450bdabf": "crc324conf",
-    "994db34e": "crc325conf", "24a9b293": "crc327conf", "c338bd98": "crc328conf",
-    "87c905d2": "crc329conf", "0c023268": "crc330conf", "82ae0d4a": "crc332conf",
-    "35a6fb7e": "crc333conf", "80a09bfe": "crc334conf", "228e894d": "crc336conf",
+    "994db34e": "crc325conf", "24a9b293": "crc327conf", "c338bd98": "crc328confNEW",
+    "87c905d2": "crc329confNEW", "0c023268": "crc330conf", "82ae0d4a": "crc332conf",
+    "35a6fb7e": "crc333conf", "80a09bfe": "crc334confNEW", "228e894d": "crc336conf",
     "c076b67a": "crc339conf", "53e967f7": "crc340conf", "fa6cadde": "crc341conf",
     "b64bbbf2": "crc342conf", "bb97c996": "crc343conf", "e4b42786": "crc345conf",
-    "76d4c217": "crc346conf", "aa54c948": "crc347conf", "7b273c06": "crc348conf",
-    "41cbf853": "crc349conf", "d440bb01": "crc350conf", "5cdc7247": "crc353conf",
-    "1c3dd621": "crc354conf", "17474ccd": "crc355conf", "9c830f2d": "crc356conf",
+    "76d4c217": "crc346conf", "aa54c948": "crc347conf", "7b273c06": "crc348confNEW",
+    "41cbf853": "crc349conf", "d440bb01": "crc350conf", "5cdc7247": "crc353confNEW",
+    "1c3dd621": "crc354confNEW", "17474ccd": "crc355conf", "9c830f2d": "crc356conf",
     "c2de0fa0": "crc357conf", "8f06f035": "crc358conf", "9a1c5053": "crc359conf",
-    "298ca4ed": "crc360conf", "982d0d1e": "crc362conf", "16170922": "crc363conf",
-    "f87d0121": "crc364conf", "966b4bbc": "crc365conf", "b83913e5": "crc366conf",
+    "298ca4ed": "crc360confNEW", "982d0d1e": "crc362conf", "16170922": "crc363conf",
+    "f87d0121": "crc364confNEW", "966b4bbc": "crc365conf", "b83913e5": "crc366conf",
     "86cd43d9": "crc367conf", "e2c0923a": "crc368conf", "da33e79a": "crc369conf",
-    "bf661330": "crc370conf", "31950326": "crc371conf", "f92af21e": "crc372conf",
-    "bca4fe9c": "crc373conf", "1ba91ce3": "crc374conf", "16cf99d8": "crc375conf",
+    "bf661330": "crc370confNEW", "31950326": "crc371confNEW", "f92af21e": "crc372conf",
+    "bca4fe9c": "crc373confNEW", "1ba91ce3": "crc374conf", "16cf99d8": "crc375confNEW",
     "64b79bc3": "crc376conf", "b852634c": "crc377conf"
 }
 
@@ -246,11 +315,59 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                 label = crc_patterns[pattern]
                 backtrack = 4
                 mode = "crc_logic"
+            elif pattern in loader_patterns:
+                label = loader_patterns[pattern]
+                # Define backtrack per loader pattern
+                if pattern == "2000636c6f616465722e636c617373":
+                    backtrack = 111
+                elif pattern in (
+                    "0c0000006c6f616465722e636c617373",
+                    "130000007369676e2f7369676e6c696e6b2e636c617373"
+                ):
+                    backtrack = 26
+                else:
+                    print(f"Unknown loader pattern {pattern}, skipping...")
+                    continue
+                mode = "loader_extract"
             else:
                 print(f"Unknown pattern {pattern}, skipping...")
                 continue
 
             for offset in offsets:
+                if mode == "loader_extract":
+                    extract_start = offset - backtrack
+                    if extract_start < 0:
+                        print(f"Skipping 0x{offset:x} (start before file)")
+                        continue
+                    f.seek(extract_start)
+                    extract = f.read(20480)  # fixed length for loaders
+
+                    # Special naming for two "classic" loader patterns
+                    if pattern in (
+                        "0c0000006c6f616465722e636c617373",
+                        "130000007369676e2f7369676e6c696e6c696e6b2e636c617373"
+                    ) and len(extract) >= 15:
+                        code_hex = extract[12:15].hex()
+                        if code_hex in loader_map:
+                            label = loader_map[code_hex]
+                        else:
+                            print(f"Unknown loader signature {code_hex}, using default label")
+
+                    # Special naming for 2000636c6f616465722e636c617373 pattern
+                    elif pattern == "2000636c6f616465722e636c617373" and len(extract) >= 83:
+                        code_hex = f"{extract[81]:02x}{extract[78]:02x}{extract[79]:02x}"
+                        if code_hex in loader_map:
+                            label = loader_map[code_hex] + "cab"
+                        else:
+                            print(f"Unknown loader signature {code_hex}, using default label")
+
+                    out_filename = f"{label}_{offset:012x}.zip"
+                    out_path = os.path.join(out_dir, out_filename)
+                    with open(out_path, "wb") as out_file:
+                        out_file.write(extract)
+                    print(f"Extracted {out_filename} ({len(extract)} bytes)")
+                    continue
+
                 extract_start = offset - backtrack
 
                 # Only check 4-byte exclusion for pattern 314159265359
