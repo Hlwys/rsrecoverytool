@@ -50,6 +50,9 @@ hex_patterns = [
     "e652d358", #"186 225 beta2004",
     "e8059684", #"350 363 2006", 
     "ec8aa7b6", #"349 december2005"
+    "2000636c6f616465722e636c617373", #"loadercab"
+    "0c0000006c6f616465722e636c617373", #"loaderjarRSC"
+    "130000007369676e2f7369676e6c696e6b2e636c617373", #loaderjarRS2"
 ]
 
 # Convert to byte patterns
