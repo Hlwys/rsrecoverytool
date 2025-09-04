@@ -38,6 +38,10 @@ eight_back_patterns = {
     "d0fab5f400": "entity7",
 }
 
+config_failsafe = {
+    "08fd540b0002": "RS2config",
+}
+
 crc_patterns = {
     "078d67ba": "243_245_june2004",
     "1874c632": "274_nov2004",
@@ -121,7 +125,7 @@ loader_map = {
 }
 
 crc_map = {
-    "dc058ad7": "crc186confNEW", "0594dfa2": "crc194conf", "b8631530": "crc204conf", "c89e323b": "crc217conf",
+    "dc058ad7": "crc186confNEW", "0594dfa2": "crc194conf", "b8631530": "crc204conf", "9bede11f": "crc215conf", "8735d0d9": "crc216conf", "c89e323b": "crc217conf",
     "fc92443a": "crc218conf", "350ae405": "crc219conf", "03ccd61b": "crc222conf",
     "fc32b40f": "crc224conf", "ab100845": "crc225conf", "12006c4a": "crc234confNEW",
     "0e47c4c4": "crc237confNEW", "5fa26512": "crc244conf", "3e413fcb": "crc245aconf", "31cf9007": "crc245bconf",
@@ -137,7 +141,7 @@ crc_map = {
     "6af1aa47": "crc318conf", "fed117ff": "crc321conf", "450bdabf": "crc324conf",
     "994db34e": "crc325conf", "24a9b293": "crc327conf", "c338bd98": "crc328confNEW",
     "87c905d2": "crc329confNEW", "0c023268": "crc330conf", "82ae0d4a": "crc332conf",
-    "35a6fb7e": "crc333conf", "80a09bfe": "crc334confNEW", "228e894d": "crc336conf",
+    "35a6fb7e": "crc333conf", "80a09bfe": "crc334conf", "228e894d": "crc336conf", "3d8b21f6": "crc338conf",
     "c076b67a": "crc339conf", "53e967f7": "crc340conf", "fa6cadde": "crc341conf",
     "b64bbbf2": "crc342conf", "bb97c996": "crc343conf", "e4b42786": "crc345conf",
     "76d4c217": "crc346conf", "aa54c948": "crc347conf", "7b273c06": "crc348confNEW",
@@ -148,14 +152,14 @@ crc_map = {
     "f87d0121": "crc364confNEW", "966b4bbc": "crc365conf", "b83913e5": "crc366conf",
     "86cd43d9": "crc367conf", "e2c0923a": "crc368conf", "da33e79a": "crc369conf",
     "bf661330": "crc370confNEW", "31950326": "crc371confNEW", "f92af21e": "crc372conf",
-    "bca4fe9c": "crc373confNEW", "1ba91ce3": "crc374conf", "16cf99d8": "crc375confNEW",
+    "bca4fe9c": "crc373conf", "1ba91ce3": "crc374conf", "16cf99d8": "crc375confNEW",
     "64b79bc3": "crc376conf", "b852634c": "crc377conf"
 }
 
 real_crc_set = {
     "886f289d", "8f9e2b87", "9327049f", "982e83fb", "9de32634", "e3f03995", "f49dc890",
     "00cc5ca2", "0e9ea79a", "1e87d494", "2072855c", "2226df9b", "368f1792", "658a091a",
-    "69661c9a", "6b686cdb", "7372633c"
+    "69661c9a", "6b686cdb", "7372633c", "343445df"
 }
 
 # Manual overrides for label naming by pattern and offset
@@ -166,7 +170,7 @@ manual_extracts = {
         237283: "entity18", 238238: "entity19",
     },
     "29edbf2901": {
-        241559: "entity20", 242388: "entity21", 242354: "entity22MISSING",
+        241559: "entity20", 242388: "entity21", 242354: "entity22",
         242463: "entity23", 244467: "entity24",
     },
     "2ded480a01": {
@@ -213,9 +217,9 @@ manual_extracts = {
         35953: "config50", 36011: "config51", 37780: "config55", 38290: "config56",
         39208: "config57", 39465: "config58", 40032: "config59", 40791: "config60or61",
         45593: "config64", 45844: "config65", 46780: "config66", 47624: "config67",
-        49584: "config68", 49603: "config71", 55425: "config72", 57870: "config73",
+        49584: "config68", 49602: "config70", 49603: "config71", 55425: "config72", 57870: "config73",
         60500: "config74", 62634: "config75", 66839: "config77", 69231: "config78MISSING",
-        71775: "config80", 58111: "config81", 58289: "config82", 58525: "config83MISSING",
+        71775: "config80", 58111: "config81", 58289: "config82", 58525: "config83",
         58809: "config84", 58819: "config85", 16751: "filter1", 15377: "filter2",
         15162: "jagex", 4990: "jagex(3)",
         113797: "land28", 119740: "land29or30", 11508: "landmem30",
@@ -223,7 +227,7 @@ manual_extracts = {
         118573: "land34", 20689: "landmem34", 118542: "land35", 126607: "land36or37",
         32438: "landmem37", 127676: "land38", 34425: "landmem38", 127695: "land39",
         127702: "land40", 129929: "land42", 129978: "land43", 131491: "land46",
-        131865: "land47", 132214: "land50", 67567: "landmem50", 135641: "land51", 80716: "landmem51memMISSING",
+        131865: "land47", 132140: "land49",  132214: "land50", 67567: "landmem50", 135641: "land51", 80716: "landmem51memMISSING",
         134168: "land52", 96519: "landmem52memMISSING", 113613: "landmem53", 133624: "land53or54", 118657: "landmem54",
         135079: "land55", 127527: "landmem55", 135159: "land56", 138455: "landmem56memMISSING",
         136232: "land58", 140327: "landmem58", 142215: "land59", 141999: "landmem60",
@@ -234,7 +238,7 @@ manual_extracts = {
         15549: "mapsmem35", 35192: "maps36", 16057: "mapsmem36", 35500: "maps37",
         18978: "mapsmem37", 36702: "maps38", 21518: "mapsmem38", 36710: "maps39",
         36704: "maps40", 31087: "maps42", 31133: "maps43", 32020: "maps46",
-        24877: "mapsmem46", 32339: "maps47", 32667: "maps50", 29753: "mapsmem50",
+        24877: "mapsmem46", 32339: "maps47", 32741: "maps49", 32667: "maps50", 29753: "mapsmem50",
         33894: "maps51", 34683: "mapsmem51memMISSING", 33887: "maps52", 38791: "mapsmem52memMISSING", 46423: "mapsmem53", 32213: "maps53or54",
         48567: "mapsmem54", 34013: "maps55", 51532: "mapsmem55", 34090: "maps56",
         55101: "mapsmem56memMISSING", 34820: "maps58", 55877: "mapsmem58", 36981: "maps59",
@@ -245,9 +249,9 @@ manual_extracts = {
         53806: "models10", 53894: "models11", 54192: "models12(1)", 54244: "models12(2)",
         57485: "models13", 58513: "models14", 58687: "models15", 61008: "models16",
         61894: "models17", 65173: "models18", 113466: "models20", 131029: "models22",
-        144388: "models23", 146108: "models24", 195500: "models25", 196003: "models26",
+        144388: "models23", 145299: "models24(1)", 146108: "models24(2)", 195500: "models25", 196003: "models26",
         241919: "models27", 242647: "models28", 275848: "models29or30",
-        286348: "models32", 286824: "models33or34", 288619: "models35MISSING",
+        286348: "models32", 286824: "models33or34", 288619: "models35",
         289822: "models36", 78921: "models6", 79420: "models7", 114375: "sounds1",
         114448: "sounds1",
         47604: "RS2interface194", 59225: "RS2interface204", 63833: "RS2interface217",
@@ -265,7 +269,7 @@ manual_extracts = {
         161416: "RS2interface350", 161818: "RS2interface355", 172248: "RS2interface356",
         172628: "RS2interface357", 178829: "RS2interface362", 179556: "RS2interface363",
         184196: "RS2interface365", 185241: "RS2interface367", 186154: "RS2interface368",
-        186739: "RS2interface369", 186692: "RS2interface372", 187822: "RS2interface374",
+        186739: "RS2interface369", 186692: "RS2interface372", 187822: "RS2interface373or374",
         187799: "RS2interface376", 185731: "RS2interface377", 
         26930: "RS2versionlist243", 26963: "RS2versionlist244", 27461: "RS2versionlist245.1",
         27881: "RS2versionlist245.2", 33400: "RS2versionlist270", 37525: "RS2versionlist289",
@@ -279,7 +283,7 @@ manual_extracts = {
         68903: "RS2versionlist349", 69797: "RS2versionlist350", 71383: "RS2versionlist355",
         71852: "RS2versionlist356", 72419: "RS2versionlist357", 75695: "RS2versionlist362",
         76319: "RS2versionlist363", 85893: "RS2versionlist365", 86788: "RS2versionlist367",
-        87378: "RS2versionlist368", 87912: "RS2versionlist369", 88673: "RS2versionlist372",
+        87378: "RS2versionlist368", 87912: "RS2versionlist369", 88673: "RS2versionlist372", 89630: "RS2versionlist373",
         90362: "RS2versionlist374", 90662: "RS2versionlist376", 91366: "RS2versionlist377",
     },
 }
@@ -310,6 +314,10 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
             elif pattern in eight_back_patterns:
                 label = eight_back_patterns[pattern]
                 backtrack = 8
+                mode = "length_from_offset"
+            elif pattern in config_failsafe:
+                label = config_failsafe[pattern]
+                backtrack = 38
                 mode = "length_from_offset"
             elif pattern in crc_patterns:
                 label = crc_patterns[pattern]
