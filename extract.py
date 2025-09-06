@@ -436,15 +436,35 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                     if len(extract) < 40:
                         print(f"Skipping 0x{offset:x} (incomplete fixed 40)")
                         continue
+                
                     first4 = extract[:4].hex()
                     if first4 in crc_map:
                         out_filename = f"{crc_map[first4]}_{offset:012x}.bin"
                     else:
-                        crc_check = extract[24:28].hex()
-                        if crc_check in real_crc_set:
+                        # --- NEW CHECK: rolling X ---
+                        X = 1234  # initial value
+                        for i in range(0, 36, 4):  # bytes 1–4 through 33–36
+                            block_val = int.from_bytes(extract[i:i+4], byteorder="big", signed=False)
+                            X = X * 2 + block_val
+                            # keep X in signed 32-bit range
+                            X = ((X + (1 << 31)) % (1 << 32)) - (1 << 31)
+                
+                        # compare against bytes 37–40
+                        check_val = int.from_bytes(extract[36:40], byteorder="big", signed=True)
+                        if X == check_val:
                             out_filename = f"crc real {label}_{offset:012x}.bin"
                         else:
-                            out_filename = f"crc false {label}_{offset:012x}.bin"
+                            crc_check = extract[24:28].hex()
+                            if crc_check in real_crc_set:
+                                out_filename = f"crc real {label}_{offset:012x}.bin"
+                            else:
+                                out_filename = f"crc false {label}_{offset:012x}.bin"
+
+                    # --- SKIP IF "crc false" ---
+                    if out_filename.startswith("crc false"):
+                        print(f"Skipping 0x{offset:x} (crc false)")
+                        continue
+                
                 else:
                     continue
 
@@ -461,3 +481,4 @@ if __name__ == "__main__":
     output_file = sys.argv[2]
     pattern_offsets = parse_output_file(output_file)
     extract_files(image_file, pattern_offsets)
+
