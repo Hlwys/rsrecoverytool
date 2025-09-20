@@ -57,8 +57,8 @@ crc_patterns = {
 
 loader_patterns = {
     "2000636c6f616465722e636c617373": "loader_cab",
-    "0c0000006c6f616465722e636c617373": "loader_jar_rsc",
-    "130000007369676e2f7369676e6c696e6b2e636c617373": "loader_jar_rs2",
+    "006c6f616465722e636c617373": "loader_jar",
+    "007369676e2f7369676e6c696e6b2e636c617373": "loader_jar",
 }
 
 # Mapping for loaderclassic/loader versions based on bytes 12-14
@@ -329,10 +329,10 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                 if pattern == "2000636c6f616465722e636c617373":
                     backtrack = 111
                 elif pattern in (
-                    "0c0000006c6f616465722e636c617373",
-                    "130000007369676e2f7369676e6c696e6b2e636c617373"
+                    "006c6f616465722e636c617373",
+                    "007369676e2f7369676e6c696e6b2e636c617373"
                 ):
-                    backtrack = 26
+                    backtrack = 29
                 else:
                     print(f"Unknown loader pattern {pattern}, skipping...")
                     continue
@@ -348,24 +348,46 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                         print(f"Skipping 0x{offset:x} (start before file)")
                         continue
                     f.seek(extract_start)
+                    header = f.read(10)
+                    f.seek(extract_start)
+
+                    # === New checks ===
+                    if pattern == "2000636c6f616465722e636c617373":
+                        if not header.startswith(b"MSCF"):
+                            print(f"Skipping 0x{offset:x} (loader_cab missing MSCF header)")
+                            continue
+                    elif pattern in (
+                        "006c6f616465722e636c617373",
+                        "007369676e2f7369676e6c696e6b2e636c617373"
+                    ):
+                        if not header.startswith(b"PK\x03\x04\x14\x00\x08\x00\x08\x00"):
+                            print(f"Skipping 0x{offset:x} (loader_jar missing PK ZIP header)")
+                            continue
+
                     extract = f.read(20480)  # fixed length for loaders
 
                     # Special naming for two "classic" loader patterns
                     if pattern in (
-                        "0c0000006c6f616465722e636c617373",
-                        "130000007369676e2f7369676e6c696e6c696e6b2e636c617373"
+                        "006c6f616465722e636c617373",
+                        "007369676e2f7369676e6c696e6b2e636c617373"
                     ) and len(extract) >= 15:
+                        byte13 = extract[13]
+                        byte12 = extract[12]
                         code_hex = extract[12:15].hex()
+                        label = f"loader_{byte13}_{byte12}_jar"
                         if code_hex in loader_map:
-                            label = loader_map[code_hex]
+                            label += "_" + loader_map[code_hex]
                         else:
                             print(f"Unknown loader signature {code_hex}, using default label")
 
                     # Special naming for 2000636c6f616465722e636c617373 pattern
                     elif pattern == "2000636c6f616465722e636c617373" and len(extract) >= 83:
+                        byte79 = extract[79]
+                        byte78 = extract[78]
                         code_hex = f"{extract[81]:02x}{extract[78]:02x}{extract[79]:02x}"
+                        label = f"loader_{byte79}_{byte78}_cab"
                         if code_hex in loader_map:
-                            label = loader_map[code_hex] + "cab"
+                            label += "_" + loader_map[code_hex]
                         else:
                             print(f"Unknown loader signature {code_hex}, using default label")
 
@@ -481,4 +503,3 @@ if __name__ == "__main__":
     output_file = sys.argv[2]
     pattern_offsets = parse_output_file(output_file)
     extract_files(image_file, pattern_offsets)
-
