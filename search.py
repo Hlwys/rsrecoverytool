@@ -52,8 +52,8 @@ hex_patterns = [
     "ec8aa7b6", #"349 december2005"
     "08fd540b0002", #"config failsafe"	
     "2000636c6f616465722e636c617373", #"loadercab"
-    "0c0000006c6f616465722e636c617373", #"loaderjarRSC"
-    "130000007369676e2f7369676e6c696e6b2e636c617373", #loaderjarRS2"
+    "006c6f616465722e636c617373", #"loaderjarRSC"
+    "007369676e2f7369676e6c696e6b2e636c617373", #loaderjarRS2"
 ]
 
 # Convert to byte patterns
@@ -144,3 +144,4 @@ if __name__ == "__main__":
     write_output(results)
 
     print("Scan complete. Results written to output.txt.")
+
