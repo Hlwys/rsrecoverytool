@@ -72,185 +72,6 @@ loader_patterns = {
     "007369676e2f7369676e6c696e6b2e636c617373": "loader_jar",
 }
 
-# Mapping for loaderclassic/loader versions based on bytes 12-14
-loader_map = {
-    "5f8c2d": "loaderclassic161",
-    "743b2e": "loaderclassic162",
-    "0a642e": "loaderclassic163",
-    "4f712e": "loaderclassic164",
-    "4c8f2e": "loaderclassic167",
-    "72a72e": "loaderclassic168",
-    "4ec92e": "loaderclassic170",
-    "72fc2e": "loaderclassic174",
-    "6f142f": "loaderclassic175",
-    "64362f": "loaderclassic176",
-    "3f5f2f": "loaderclassic177",
-    "6a742f": "loaderclassic178",
-    "5d832f": "loaderclassic179",
-    "7c932f": "loaderclassic180",
-    "5a9e2f": "loaderclassic181",
-    "4d3c30": "loaderclassic182",
-    "7d4430": "loaderclassic183",
-    "5d5230": "loaderclassic185",
-    "54aa30": "loaderclassic194",
-    "45dc30": "loaderclassic196",
-    "821831": "loaderclassic198",
-    "865c31": "loaderclassic199",
-    "728d31": "loaderclassic201",
-    "890333": "loaderclassic202",
-    "7b6833": "loaderclassic203",
-    "73b934": "loaderclassic204",
-    "51812f": "loader185",
-    "69822f": "loader186",
-    "8d832f": "loader187",
-    "738d2f": "loader190",
-    "5d7130": "loader204",
-    "5f7e30": "loader211",
-    "758130": "loader213",
-    "818530": "loader214",
-    "6b8630": "loader215",
-    "6a8f30": "loader216",
-    "429030": "loader217",
-    "709430": "loader218",
-    "759a30": "loader219",
-    "489d30": "loader220",
-    "81a530": "loader222",
-    "47aa30": "loader223",
-    "86ab30": "loader224",
-    "6bb230": "loader225",
-    "70c130": "loader228",
-    "75c130": "loader229",
-    "92c130": "loader234",
-    "68c230": "loader236",
-    "76c230": "loader237",
-    "72c330": "loader238",
-    "96c830": "loader240",
-    "70ce30": "loader241",
-    "71d530": "loader242",
-    "4bd530": "loader243",
-    "53dc30": "loader244",
-    "71dd30": "loader245",
-    "69ed30": "loader245",
-    "71f430": "loader245",
-    "59f630": "loader246",
-    "6afb30": "loader247",
-    "6b0231": "loader248",
-    "730931": "loader249",
-    "6b1831": "loader252",
-    "712131": "loader253",
-    "592731": "loader254",
-    "6b2e31": "loader255",
-    "6b3431": "loader256",
-    "733b31": "loader257",
-    "763c31": "loader258",
-    "8b3e31": "loader259",
-    "4c4531": "loader260",
-    "494e31": "loader261",
-    "6a5231": "loader262",
-    "945231": "loader263",
-    "735a31": "loader265",
-    "785c31": "loader267",
-    "4a6231": "loader268",
-    "926431": "loader270",
-    "607131": "loader273",
-    "5c7731": "loader274",
-    "467d31": "loader275",
-    "518631": "loader276",
-    "8e8731": "loader278",
-    "4e8d31": "loader279",
-    "5d8f31": "loader280",
-    "569531": "loader282",
-    "6b2532": "loader285",
-    "602732": "loader287",
-    "582a32": "loader288",
-    "4d3132": "loader289",
-    "5e3a32": "loader290",
-    "5a3f32": "loader291",
-    "694732": "loader292",
-    "6e4832": "loader294",
-    "504e32": "loader295",
-    "4e5632": "loader296",
-    "775732": "loader297",
-    "565c32": "loader298",
-    "836132": "loader299",
-    "5b6732": "loader300",
-    "636e32": "loader302",
-    "7e6e32": "loader303",
-    "557532": "loader304",
-    "517d32": "loader305",
-    "498432": "loader306",
-    "618b32": "loader307",
-    "4b9232": "loader308",
-    "559932": "loader309",
-    "53a432": "loader310",
-    "6ba532": "loader311",
-    "5ea932": "loader312",
-    "53b132": "loader313",
-    "6cbf32": "loader314",
-    "77c132": "loader315",
-    "50c632": "loader316",
-    "6ecd32": "loader317",
-    "4ad632": "loader318",
-    "4edb32": "loader319",
-    "51e532": "loader320",
-    "79e732": "loader321",
-    "6ceb32": "loader322",
-    "46eb32": "loader323",
-    "6ced32": "loader324",
-    "55f232": "loader325",
-    "7bf932": "loader326",
-    "4f0133": "loader327",
-    "4e0933": "loader328",
-    "590f33": "loader329",
-    "5d1633": "loader330",
-    "5b1e33": "loader331",
-    "881e33": "loader332",
-    "6c2633": "loader333",
-    "622c33": "loader334",
-    "693333": "loader336",
-    "793a33": "loader337",
-    "5d3b33": "loader338",
-    "684333": "loader339",
-    "605133": "loader340",
-    "685833": "loader341",
-    "4a5f33": "loader342",
-    "5b6833": "loader343",
-    "4f6e33": "loader344",
-    "4a7533": "loader345",
-    "4f7c33": "loader346",
-    "6a8533": "loader347",
-    "4d8c33": "loader348",
-    "569333": "loader349",
-    "539e33": "loader350",
-    "5e2a34": "loader351",
-    "763034": "loader352",
-    "683034": "loader353",
-    "5a3334": "loader354",
-    "5b3734": "loader355",
-    "513e34": "loader356",
-    "5e4734": "loader357",
-    "715034": "loader358",
-    "505134": "loader359",
-    "565434": "loader360",
-    "565634": "loader361",
-    "6f5634": "loader362",
-    "7b5b34": "loader363",
-    "446734": "loader364",
-    "6a6e34": "loader365",
-    "497534": "loader366",
-    "907534": "loader367",
-    "4a7c34": "loader368",
-    "608334": "loader369",
-    "548a34": "loader370",
-    "758a34": "loader371",
-    "538c34": "loader372",
-    "519234": "loader373",
-    "4b9434": "loader374",
-    "489834": "loader375",
-    "539934": "loader376",
-    "52a234": "loader377",
-}
-
 crc_map = {
     "dc058ad7": "crc186confNEW",
     "0594dfa2": "crc194conf",
@@ -285,7 +106,8 @@ crc_map = {
     "b508f498": "crc298conf",
     "3276b47f": "crc299conf",
     "af6801a7": "crc300confNEW",
-    "5ff69069": "crc303confNEW",
+    "5ff69069": "crc303conf",
+    "6bdd71a8": "crc304conf",
     "a44b0dbf": "crc306conf",
     "2567f764": "crc307confNEW",
     "dec2416f": "crc308conf",
@@ -301,6 +123,7 @@ crc_map = {
     "fed117ff": "crc321conf",
     "450bdabf": "crc324conf",
     "994db34e": "crc325conf",
+    "508f41ed": "crc326conf",
     "24a9b293": "crc327conf",
     "c338bd98": "crc328confNEW",
     "87c905d2": "crc329confNEW",
@@ -372,6 +195,7 @@ real_crc_set = {
 manual_rs2config_headers = {
     "01c3b701c3b7": "RS2config194",
     "01d7cd01d7cd": "RS2config204",
+    "01e8ac01e8ac": "RS2config215",
     "01f68c01f68c": "RS2config217",
     "01f82c01f82c": "RS2config218",
     "0200b20200b2": "RS2config222",
@@ -392,6 +216,7 @@ manual_rs2config_headers = {
     "033677033677": "RS2config291",
     "035254035254": "RS2config295",
     "037789037789": "RS2config299",
+    "038cde038cde": "RS2config303",
     "03a4bd03a4bd": "RS2config304",
     "03b41103b411": "RS2config306",
     "03d89003d890": "RS2config308",
@@ -615,6 +440,7 @@ manual_extracts = {
         # RS2interface overrides
         "03385800b9ee": "RS2interface194",
         "03f01f00e753": "RS2interface204",
+        "0447af00f92c": "RS2interface215",
         "0448d600f953": "RS2interface216or217",
         "0457a900fcc5": "RS2interface218or219",
         "0487e0010e6e": "RS2interface222",
@@ -631,6 +457,7 @@ manual_extracts = {
         "07d47801c301": "RS2interface291",
         "07eb1a01cae3": "RS2interface295",
         "07f32701cd6b": "RS2interface299",
+        "08150c01d581": "RS2interface303",
         "0835a801dd28": "RS2interface304",
         "083a4801deec": "RS2interface306",
         "089d4b01f2f6": "RS2interface308",
@@ -826,6 +653,7 @@ manual_extracts = {
 
     "00010de00c5f": {
         "003e1a003e1a": "RS2sounds204",
+        "0043dd0043dd": "RS2sounds215",
         "0047f40047f4": "RS2sounds216or217",
         "00499b00499b": "RS2sounds218",
         "0055e30055e3": "RS2sounds222",
@@ -842,6 +670,7 @@ manual_extracts = {
         "0100f10100f1": "RS2sounds291",
         "011345011345": "RS2sounds295",
         "012bfa012bfa": "RS2sounds299",
+        "01360c01360c": "RS2sounds303",
         "013852013852": "RS2sounds304",
         "01423f01423f": "RS2sounds306",
         "014521014521": "RS2sounds308",
@@ -922,7 +751,8 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                 backtrack = 4
                 mode = "crc_logic"
             elif pattern in loader_patterns:
-                label = loader_patterns[pattern]
+                # Loader extraction: extraction still uses these backtracks,
+                # but naming is now based on FAT-style date near the pattern.
                 if pattern == "2000636c6f616465722e636c617373":
                     backtrack = 111
                 elif pattern in (
@@ -946,11 +776,13 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                     continue
 
                 if mode == "loader_extract":
+                    # Check file header from the extraction start (as before)
                     f.seek(extract_start)
                     header = f.read(10)
                     f.seek(extract_start)
 
                     if pattern == "2000636c6f616465722e636c617373":
+                        # CAB loader should start with MSCF
                         if not header.startswith(b"MSCF"):
                             print(f"Skipping 0x{offset:x} (loader_cab missing MSCF header)")
                             continue
@@ -958,36 +790,67 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                         "006c6f616465722e636c617373",
                         "007369676e2f7369676e6c696e6b2e636c617373",
                     ):
+                        # JAR loader should start with PK zip local header
                         if not header.startswith(b"PK\x03\x04\x14\x00\x08\x00\x08\x00"):
                             print(f"Skipping 0x{offset:x} (loader_jar missing PK ZIP header)")
                             continue
 
+                    # Extract a fixed chunk (unchanged from previous behaviour)
+                    f.seek(extract_start)
                     extract = f.read(20480)
 
-                    if pattern in (
-                        "006c6f616465722e636c617373",
-                        "007369676e2f7369676e6c696e6b2e636c617373",
-                    ) and len(extract) >= 15:
-                        byte13 = extract[13]
-                        byte12 = extract[12]
-                        code_hex = extract[12:15].hex()
-                        label = f"loader_{byte13}_{byte12}_jar"
-                        if code_hex in loader_map:
-                            label += "_" + loader_map[code_hex]
-                        else:
-                            print(f"Unknown loader signature {code_hex}, using default label")
-                    elif pattern == "2000636c6f616465722e636c617373" and len(extract) >= 83:
-                        byte79 = extract[79]
-                        byte78 = extract[78]
-                        code_hex = f"{extract[81]:02x}{extract[78]:02x}{extract[79]:02x}"
-                        label = f"loader_{byte79}_{byte78}_cab"
-                        if code_hex in loader_map:
-                            label += "_" + loader_map[code_hex]
-                        else:
-                            print(f"Unknown loader signature {code_hex}, using default label")
+                    # --- New naming logic based on FAT-style date near the pattern ---
 
-                    out_filename = f"{label}_{extract_start:012x}.zip"
-                    out_path = os.path.join(out_dir, out_filename)
+                    # Determine where to read the 16-bit date and which extension to use
+                    if pattern == "2000636c6f616465722e636c617373":
+                        # Go back 4 bytes before the pattern and read 2 bytes (CAB)
+                        date_backtrack = 4
+                        ext = "cab"
+                    else:
+                        # For the two JAR patterns: go back 17 bytes and read 2 bytes
+                        date_backtrack = 17
+                        ext = "jar"
+
+                    date_offset = offset - date_backtrack
+                    if date_offset < 0:
+                        print(f"Skipping 0x{offset:x} (date offset before file)")
+                        continue
+
+                    f.seek(date_offset)
+                    date_bytes = f.read(2)
+                    if len(date_bytes) != 2:
+                        print(f"Skipping 0x{offset:x} (could not read 2 date bytes)")
+                        continue
+
+                    # 16-bit unsigned integer, little-endian
+                    date_val = int.from_bytes(date_bytes, byteorder="little", signed=False)
+
+                    # Decode FAT date:
+                    # - first 7 bits: (year - 1980)
+                    # - next 4 bits: month
+                    # - last 5 bits: day
+                    year = (date_val >> 9) + 1980
+                    month = (date_val >> 5) & 0xF
+                    day = date_val & 0x1F
+
+                    # Format as YYYY_MM_DD (e.g. 11835 -> 2003_01_27)
+                    date_str = f"{year:04d}_{month:02d}_{day:02d}"
+
+                    # Base filename
+                    label = f"loader_{date_str}"
+
+                    # Choose output directory:
+                    # - year >= 2004 -> extracted/loaders
+                    # - year <= 2003 -> extracted
+                    if year >= 2004:
+                        target_dir = os.path.join(out_dir, "loaders")
+                        os.makedirs(target_dir, exist_ok=True)
+                    else:
+                        target_dir = out_dir
+
+                    out_filename = f"{label}_{extract_start:012x}.{ext}"
+                    out_path = os.path.join(target_dir, out_filename)
+
                     with open(out_path, "wb") as out_file:
                         out_file.write(extract)
                     print(f"Extracted {out_filename} ({len(extract)} bytes)")
@@ -1095,12 +958,38 @@ def extract_files(image_path, pattern_offsets, out_dir="extracted"):
                 print(f"Extracted {out_filename} ({len(extract)} bytes)")
 
 
+# NEW: helper to interpret drive letters
+def resolve_path_or_drive(arg):
+    """
+    If arg is a Windows drive like 'F:' or 'F:\\',
+    return \\\\.\\F: so we can read the raw volume.
+    Otherwise return arg unchanged (e.g. image file path).
+    """
+    if os.name == "nt":
+        # Normalize F:\ to F:
+        if len(arg) == 3 and arg[1] == ":" and (arg[2] == "\\" or arg[2] == "/"):
+            arg = arg[:2]
+
+        if len(arg) == 2 and arg[1] == ":":
+            drive_letter = arg[0].upper()
+            return f"\\\\.\\{drive_letter}:"
+
+    return arg
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python extract_from_image.py <image_file> <output.txt>")
+        print("Usage: python extract.py <image_file_or_drive_letter> <output.txt>")
+        print("Examples:")
+        print("  python extract.py disk.img output.txt")
+        print("  python extract.py F: output.txt")
         sys.exit(1)
 
-    image_file = sys.argv[1]
+    image_arg = sys.argv[1]
     output_file = sys.argv[2]
+
+    image_file = resolve_path_or_drive(image_arg)
+    print(f"Using source: {image_file}")
+
     pattern_offsets = parse_output_file(output_file)
     extract_files(image_file, pattern_offsets)
