@@ -1,6 +1,6 @@
 # RuneScape Cache Recovery Tool
 
-This script will recover any RuneScape Classic or early RuneScape 2 cache file from an image of a hard drive.
+This script will recover any RuneScape Classic or early RuneScape 2 cache file from an image of a hard drive. The tool works for any RuneScape versions from 4 January 2001 until 16 May 2006.
 
 ## Requirements
 
