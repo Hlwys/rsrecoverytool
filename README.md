@@ -11,9 +11,9 @@ This script will recover any RuneScape Classic or early RuneScape 2 cache file f
 
 1. You can either recover directly from a currently active hard drive, or from an image backup of the drive. There are several programs that can create an image, [DMDE](https://dmde.com/) is a free tool.
 
-2. Edit either the `Recover from active hard drive.bat` or `Recover from drive image.bat` file depending on your preference. Replace `DRIVE LETTER` or `{IMAGE LOCATION}` on both lines, to either specify the drive letter (e.g. `F:`) or the image location (e.g. `C:\Users\User\myimage.img`)
+2. Edit the`Run.bat` file. Replace `"C:\imagename.bin"` to either specify the drive letter (e.g. `"F:"`) or the image location (e.g. `"C:\Users\User\myimage.img"`)
 
 3. Two scripts will run - the first will scan the image for all file locations then produce a list of locations called `output.txt`.
-   The second will then extract files based on these locations. If you are running the script again you can delete the search command and just run the extraction.
+   The second will then extract files based on these locations. If you want to run the script again, adding `--extract-only -i output.txt` to the .bat file will skip searching and only extract.
 
 The search should take roughly 30 minutes for an 80GB hard drive.
